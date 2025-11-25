@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Video Downloader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐦 Twitter Video Downloader</h1>
+            <p class="subtitle">Download Twitter videos in different qualities</p>
+        </div>
+
+        <div class="search-section">
+            <form id="videoForm">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="videoUrl" 
+                        placeholder="Paste Twitter video URL here..." 
+                        required
+                    >
+                    <button type="submit" id="submitBtn">
+                        <span id="btnText">Get Video</span>
+                        <span id="btnLoader" class="loader hidden"></span>
+                    </button>
+                </div>
+            </form>
+            <p class="hint">Example: https://twitter.com/username/status/123456789</p>
+        </div>
+
+        <div id="errorMessage" class="error-message hidden"></div>
+
+        <div id="videoResult" class="video-result hidden">
+            <div class="video-info">
+                <img id="videoThumbnail" class="thumbnail" src="" alt="Video thumbnail">
+                <div class="video-details">
+                    <h3 id="videoTitle"></h3>
+                    <p id="videoAuthor"></p>
+                </div>
+            </div>
+
+            <div class="quality-options">
+                <h3>Select Quality:</h3>
+                <div id="qualityButtons" class="quality-buttons"></div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Made with ❤️ | Simple & Minimal</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
